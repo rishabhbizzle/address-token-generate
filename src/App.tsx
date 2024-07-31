@@ -73,7 +73,7 @@ const App: React.FC = () => {
         <Loader2 className="animate-spin h-8 w-8 mt-8" />
       ) : (
         selectedAddress ? (
-          <div className="mt-8 grid grid-cols-2 items-center gap-5">
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 items-center gap-5">
             <Map latitude={coordinates.lat} longitude={coordinates.lng} />
             <NFTGenerator address={selectedAddress} />
           </div>

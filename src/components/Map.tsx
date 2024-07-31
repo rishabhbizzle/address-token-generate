@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import { GoogleMap, Marker } from '@react-google-maps/api';
 import { Card } from "@/components/ui/card";
 
@@ -13,8 +13,8 @@ const Map: React.FC<MapProps> = ({ latitude, longitude }) => {
     lat: latitude,
     lng: longitude
   };
-
-  const [map, setMap] = React.useState<google.maps.Map | null>(null);
+    //   @ts-ignore
+  const [map, setMap] = useState<google.maps.Map | null>(null);
 
   const onLoad = useCallback((map: google.maps.Map) => {
     const bounds = new window.google.maps.LatLngBounds(center);
@@ -22,7 +22,7 @@ const Map: React.FC<MapProps> = ({ latitude, longitude }) => {
     setMap(map);
   }, [center]);
 
-  const onUnmount = React.useCallback(() => {
+  const onUnmount = useCallback(() => {
     setMap(null);
   }, []);
 

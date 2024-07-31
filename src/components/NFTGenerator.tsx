@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React,{ useState } from "react";
 import Web3 from "web3";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
-import { BitcoinIcon, House, Loader2 } from "lucide-react";
+import { House, Loader2 } from "lucide-react";
 
 interface NFTGeneratorProps {
   address: string;
