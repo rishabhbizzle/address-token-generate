@@ -3,15 +3,20 @@
 
 ## Overview
 
-This React application allows users to input their home address, view it on a map, and generate an NFT token based on the address. It features address autocomplete, map display, and location auto-detection capabilities.
+This React application allows users to input their home address, view it on a map, and generate an address NFT token on the Ethereum blockchain. It features address autocomplete, map display, and location auto-detection capabilities.
+
+## Demo 
+
+https://github.com/user-attachments/assets/aaa1908d-aaf8-4596-b78d-6ba7f02b70b8
+
+
 
 ## Features
 
 - Address input with Google Places Autocomplete
 - Map display of the selected address using Google Maps
 - Auto-detection of user's current location
-- NFT token generation based on the input address
-- Responsive design with Tailwind CSS
+- NFT token generation on Ethereum blockchain based on the input address using ethers js 
 
 ## Tech Stack
 
@@ -19,25 +24,18 @@ This React application allows users to input their home address, view it on a ma
 - Tailwind CSS for styling
 - Google Maps JavaScript API for map display
 - Google Places API for address autocomplete
-- Web3.js for NFT token generation
+- ethers js for NFT token generation
+  
 
-Demo:
+## Implementation Details
 
-https://github.com/user-attachments/assets/17e4c4fe-d85a-4b6c-ac03-37f4c54b500a
+Address Input with Autocomplete
+We use the react-google-autocomplete component to provide autocomplete functionality for address input. The component integrates with the Google Places API to fetch address suggestions as the user types.
 
+Displaying the Address on a Map
+We use @react-google-maps/api to display the selected address on a Google Map. When the user selects an address from the autocomplete suggestions, the map updates to show the location.
 
-## Key Components
-
-### AddressInput
-
-This component provides an input field with Google Places Autocomplete functionality. It also includes a button for auto-detecting the user's current location.
-
-### Map
-
-The Map component uses the Google Maps JavaScript API to display a map centered on the selected address, with a marker indicating the exact location.
-
-### NFTGenerator
-
-This component simulates the generation of an NFT token based on the input address. In a real-world scenario, this would interact with a blockchain network.
+Generating an NFT Token
+We used ethers package to help communicate to the blockchain network and the smart contract to generate the NFT. Upon successful NFT creation, the details of the transaction and NFT can be verified on Sepolia Etherscan (sepolia.etherscan.io), including contract and transaction details.
 
 
